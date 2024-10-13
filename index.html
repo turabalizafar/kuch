@@ -13,47 +13,55 @@
         text-align: left;
       }
 
-      ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        background-color: #333;
+     nav{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      height: 50px;
+      justify-content: center;
+     }
+      a {
+        position: relative;
+        cursor: pointer;
+        color: #efefee;
+        font-size: 28px;
+        padding: 0.5rem 1rem;
+        transition: color 0.25s;
       }
 
-      li {
-        float: right;
+      a::after {
+        position: absolute;
+        content: "";
+        inset: 0;
+        background: wheat;
+        scale: 1 0;
+        z-index: -1;
+        transition: 0.45s;
+        border-radius: 10px;
       }
 
-      li.none {
-        float: left;
-        size: 20px;
-        padding: 14px 16px;
-        color: white;
-      }
+    a:hover {
+      color: black;
 
-      li a {
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 14px 25px;
-        text-decoration: none;
-      
-      }
-li a:hover {
-        background-color: #111;
-      
-      }
+    }
+
+    a:hover::after {
+      scale: 1 1;
+    }
+
     </style>
   </head>
   <body>
-    <ul class="topnav">
-      <li class="none">GHULAM ABUBAKER</li>
-      <li><a class="active" href="#home">Home</a></li>
-      <li><a href="#news">News</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="#about">About</a></li>
-    </ul>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="">About</a>
+      <a href="">Services</a>
+      <a href="">Projects</a>
+      <a href="">Education</a>
+      <a href="">Contact</a>
+    </nav>
+    
     <div class="intro">
       <p>
         Hello I'm Ghulam AbuBaker, a Quantity Serveyour Engineer in KEO
